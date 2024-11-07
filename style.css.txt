@@ -1,51 +1,62 @@
-/* Reset default browser styles */
-* {
+/* Full-page background image */
+body {
+    background-image: url('images/background.jpg'); /* Adjust path if needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps image fixed on scroll */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
+/* Adjust container and elements for transparent background */
+.container {
     display: flex;
+    flex-direction: row;
     height: 100vh;
+    width: 100%;
+    position: relative;
 }
 
-nav {
-    width: 200px;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
+/* Sidebar styling */
+.sidebar {
+    width: 20%; /* Adjust width as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 46%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8); /* Slight white background for readability */
+    padding: 10px;
+}
+
+.name {
+    font-size: 2em;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Navigation links styling */
+.nav-links {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    position: absolute;
+    top: 29%;
+    left: 25%; /* Adjust to position it next to the sidebar */
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8); /* Slight white background for readability */
+    padding: 10px;
 }
 
-.home-link {
-    font-size: 1.5em;
+.nav-links a {
+    font-size: 1.2em;
+    color: #333;
     text-decoration: none;
-    color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 0.5em;
 }
 
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    margin: 10px 0;
-}
-
-nav ul li a {
-    color: #ccc;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    color: #fff;
-}
-
-main {
-    flex-grow: 1;
-    padding: 40px;
+.nav-links a:hover {
+    color: #555; /* Hover effect */
 }
